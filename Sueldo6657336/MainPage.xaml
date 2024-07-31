@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:Sueldo6657336.ViewModels"
+             x:Class="Sueldo6657336.MainPage">
+
+    <ContentPage.BindingContext>
+        <viewmodel:MainViewModels/>
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Entry Text="{Binding Sueldo}" Margin="5"/>
+
+            <Button Text="Sumar" x:Name="BtnSum" Margin="5" Command="{Binding ConversionCommand}"/>
+
+            <Entry Text="{Binding Resultado}" Margin="5"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
